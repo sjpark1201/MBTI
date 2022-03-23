@@ -1,14 +1,14 @@
 function f_or_t = personality_test_f_or_t(questions, options)
 
-Q1 = "If your friend was wearing something you didn't like, would you tell them?";
-Q2 = "What is the biggest thing that gets in the way of your work?";
-Q3 = "Which statement do you most identify with?";
-Q4 = "How do you feel about conflict?";
-Q5 = "Which do you value the most?";
-Q6 = "When making an important life decision, which do you consider first?";
-Q7 = "If you had to pick a game, which one would you choose?";
-Q8 = "Is it worse to be:";
-Q9 = "Do you value in yourself more that you are:";
+Q1 = "QUESTION: If your friend was wearing something you didn't like, would you tell them?";
+Q2 = "QUESTION: What is the biggest thing that gets in the way of your work?";
+Q3 = "QUESTION: Which statement do you most identify with?";
+Q4 = "QUESTION: How do you feel about conflict?";
+Q5 = "QUESTION: Which do you value the most?";
+Q6 = "QUESTION: When making an important life decision, which do you consider first?";
+Q7 = "QUESTION: If you had to pick a game, which one would you choose?";
+Q8 = "QUESTION: Is it worse to be:";
+Q9 = "QUESTION: Do you value in yourself more that you are:";
 
 questions = [Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9];
 
@@ -22,7 +22,7 @@ end
 
 
 for i = 1:9
-    question = random_q_bank(i);
+    specific_question = random_q_bank(i);
     if question == Q1
         options = ["No, I would still tell them I like it" "Definitely, if the tables were turned, I would want to know" "Probably not, I wouldn't want to hurt their feelings" "Yes, if their clothes were stained, ripped, or didn't fit properly"];
     elseif question == Q2

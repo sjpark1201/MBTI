@@ -1,5 +1,5 @@
 
-% Questions 
+% Questions: questions were created by all three of us (~2 hours)
 
     Q1 = "QUESTION: When you call someone do you: ";
     Q2 = "QUESTION: Do you prefer ...";
@@ -10,15 +10,24 @@
     Q7 = "QUESTION: Which group of colors do you like best?";
     Q8 = "QUESTION: What type of TV show do you like best?";
     Q9 = "QUESTION: What started the last fight that you had with a friend or significant other?";
-    Q10 = "QUESTION: If your friend was wearing something you didn't like, would you tell them?";
-    Q11 = "QUESTION: What is the biggest thing that gets in the way of your work?";
-    Q12 = "QUESTION: Which statement do you most identify with?";
-    Q13 = "QUESTION: How do you feel about conflict?";
-    Q14 = "QUESTION: Which do you value the most?";
-    Q15 = "QUESTION: When making an important life decision, which do you consider first?";
-    Q16 = "QUESTION: If you had to pick a game, which one would you choose?";
-    Q17 = "QUESTION: Is it worse to be:";
-    Q18 = "QUESTION: Do you value in yourself more that you are:";
+    Q10 = "QUESTION: Which of the following classes are you most likely to take next semester?";
+    Q11 = "QUESTION: When writing a paper, do you:";
+    Q12 = "QUESTION: If asked to attend a social event, do you:";
+    Q13 = "QUESTION: Which of the following appeals to you the most?";
+    Q14 = "QUESTION: When you see a wishing well do you throw a penny in and make a wish?";
+    Q15 = "QUESTION: If you play a musical instrument (or if you did play one), how do you approach music?";
+    Q16 = "QUESTION: When looking for places to eat, which criteria is of most importance?";
+    Q17 = "QUESTION: What kinds of books to you enjoy?";
+    Q18 = "QUESTION: When eating a new food, do you:";
+    Q19 = "QUESTION: If your friend was wearing something you didn't like, would you tell them?";
+    Q20 = "QUESTION: What is the biggest thing that gets in the way of your work?";
+    Q21 = "QUESTION: Which statement do you most identify with?";
+    Q22 = "QUESTION: How do you feel about conflict?";
+    Q23 = "QUESTION: Which do you value the most?";
+    Q24 = "QUESTION: When making an important life decision, which do you consider first?";
+    Q25 = "QUESTION: If you had to pick a game, which one would you choose?";
+    Q26 = "QUESTION: Is it worse to be:";
+    Q27 = "QUESTION: Do you value in yourself more that you are:";
     Q28 = "QUESTION: Walking into a bookstore, you observe two books with their titles listed below. Wanting to learn from what you read, which of the following books would you pick off the shelf?";
     Q29 = "QUESTION: Which of the following statements would you consider a compliment:";
     Q30 = "QUESTION: Youre at a bakery and spot your favorite sweet treat on the back shelf. Which of the following best describes you as you attempt to grab the treat?";
@@ -31,28 +40,36 @@
    
 % Minchae Kim wrote and debugged the code: 2-3 hours
 
-questions = [Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q28 Q29 Q30 Q31 Q32 Q33 Q34 Q35 Q36];
+questions = [Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 Q21 Q22 Q23 Q24 Q25 Q26 Q27 Q28 Q29 Q30 Q31 Q32 Q33 Q34 Q35 Q36];
 
 random_q_bank = [];
-r_q_bank = randperm(27);
+r_q_bank = randperm(36);
 
-for num = r_q_bank % randomizes the questions 
+% the for loop below randomizes question order
+
+for num = r_q_bank 
     question = questions(num);
     random_q_bank = [random_q_bank question];
 end 
 
-for i = 1:27 % this for loop displays questions in random order until test is complete
-
 % Sean Park coded the following: 8-10 hours 
-% displays the question 
+% this for loop displays questions in random order until test is complete
 
-    specific_question = random_q_bank(i);
+for i = 1:36 
+
+    specific_question = random_q_bank(i); 
     
+    % displays the question on the screen
+
     Screen('TextSize', window, 30);
     Screen('TextFont', window, 'Courier');
     DrawFormattedText(window, char(specific_question), 'center', screenYpixels * 0.2, [1 1 1]); 
     
-% assigning and displaying specific options to each question
+    %Q1-Q9 and Q19-Q27 were coded by Minchae Kim: 1 hour
+    %Q10-Q11 was coded by Wonjin Ko: 1 hour
+    %Q28-Q36 was coded by Sean Park: 1 hour
+ 
+    % assigning and displaying specific options to each question
     
     if specific_question == Q1
         option1 = '(1) Easily come up with stuff on the fly'; 
@@ -100,51 +117,96 @@ for i = 1:27 % this for loop displays questions in random order until test is co
         option3 = '(3) I was accused of being aloof or distracted during a conversation';
         option4 = '(4) I felt like they were not spending enough time with me';
     elseif specific_question == Q10
+        option1 = '(1) CSCI 1510: Introduction to Cryptography and Computer Security';
+        option2 = '(2) ANTH 1310: International Health: Anthropological Perspectives';
+        option3 = '(3) BIOL 1140: Tissue Engineering';
+        option4 = '(4) CLPS 1680F: Topics in Development: The Developmental and Evolutionary Origins of Mind';
+    elseif specific_question == Q11
+        option1 = '(1) Start with a detailed outline';
+        option2 = '(2) Start writing, and see where it goes';
+        option3 = '(3) Have a hard time with an initial idea';
+        option4 = '(4) Have a hard time filling the word count';
+    elseif specific_question == Q12
+        option1 = '(1) Analyze the pros and cons of attending before making a decision';
+        option2 = '(2) Decide to go and deal with consequences after';
+        option3 = '(3) Decide to stay and feel FOMO (fear of missing out)';
+        option4 = '(4) Decide to go and regret going';
+    elseif specific_question == Q13
+        option1 = '(1) Painting 1';
+        option2 = '(2) Painting 2';
+        option3 = '(3) Painting 3';
+        option4 = '(4) Painting 4';
+    elseif specific_question == Q14
+        option1 = '(1) No, but I do fish out some pocket change';
+        option2 = '(2) Sure, I believe in luck';
+        option3 = '(3) I guess ... I have spare change';
+        option4 = '(4) Always, I even have other lucky charms';
+    elseif specific_question == Q15
+        option1 = '(1) Music is made through the harmony beats and keys';
+        option2 = '(2) Music is made through expressive notes, without restriction';
+        option3 = '(3) Music should follow what the composer had intended it to sound like';
+        option4 = '(4) Music should be objective and it is fine to put your own twist on pieces';
+    elseif specific_question == Q16
+        option1 = '(1) Distance to the place';
+        option2 = '(2) How good the food looks';
+        option3 = '(3) Ratings of the place';
+        option4 = '(4) Your food preference';
+    elseif specific_question == Q17
+        option1 = '(1) Non-fiction ';
+        option2 = '(2) Fiction';
+        option3 = '(3) Textbooks';
+        option4 = '(4) Graphic Novels';
+    elseif specific_question == Q18
+        option1 = '(1) See how others feel about it ';
+        option2 = '(2) Smell it';
+        option3 = '(3) Wonder how it would taste';
+        option4 = '(4) Eat it';
+    elseif specific_question == Q19
         option1 = '(1) No, I would still tell them I like it';
         option2 = '(2) Definitely, if the tables were turned, I would want to know';
         option3 = '(3) Probably not, I wouldnt want to hurt their feelings';
         option4 = '(4) Yes, if their clothes were stained, ripped, or didnt fit properly';
-    elseif specific_question == Q11
-        option1 = 'I hold a grudge and have a hard time letting things go';
-        option2 = 'I am a stickler for the rules';
-        option3 = 'I let my emotions disrupt my workflow';
-        option4 = 'I can be too technical about things';
-    elseif specific_question == Q12
-        option1 = 'When there is conflict around me, I feel unbalanced or off';
-        option2 = 'I hate lying and value the truth above all else';
-        option3 = 'Before making a decision I like to talk with everyone involved';
-        option4 = 'I enjoy doing highly technical or scientific work';
-    elseif specific_question == Q13
+    elseif specific_question == Q20
+        option1 = '(1) I hold a grudge and have a hard time letting things go';
+        option2 = '(2) I am a stickler for the rules';
+        option3 = '(3) I let my emotions disrupt my workflow';
+        option4 = '(4) I can be too technical about things';
+    elseif specific_question == Q21
+        option1 = '(1) When there is conflict around me, I feel unbalanced or off';
+        option2 = '(2) I hate lying and value the truth above all else';
+        option3 = '(3) Before making a decision I like to talk with everyone involved';
+        option4 = '(4) I enjoy doing highly technical or scientific work';
+    elseif specific_question == Q22
         option1 = '(1) I avoid it all costs, it makes me feel very uncomfortable';
         option2 = '(2) Its a necessary part of life that can be handled';
         option3 = '(3) I dont like it, but can hold my own in an argument';
         option4 = '(4) I welcome it, since conflict often results in a solution';
-    elseif specific_question == Q14
+    elseif specific_question == Q23
         option1 = '(1) Harmony';
         option2 = '(2) Truth';
         option3 = '(3) Relationships';
         option4 = '(4) Logic';
-    elseif specific_question == Q15
+    elseif specific_question == Q24
         option1 = '(1) My personal feelingss';
         option2 = '(2) The outcome that makes the most sense';
         option3 = '(3) My career goals';
         option4 = '(4) What is best for my friends and family';
-    elseif specific_question == Q16
+    elseif specific_question == Q25
         option1 = '(1) Charades';
         option2 = '(2) Chess';
         option3 = '(3) Truth or dare';
         option4 = '(4) Monopoly';
-    elseif specific_question == Q17
+    elseif specific_question == Q26
         option1 = '(1) Merciless';
         option2 = '(2) Unjust';
         option3 = '(3) Heartless';
         option4 = '(4) Biased';
-    elseif specific_question == Q18;
+    elseif specific_question == Q27
         option1 = '(1) Devoted';
         option2 = '(2) Unwavering';
         option3 = '(3) Admiring';
         option4 = '(4) Steadfast';
-    elseif specific_question == Q28 
+    elseif specific_question == Q28
         option1 = '(1) The Path Towards Success';
         option2 = '(2) Taking Life One Step at a Time'; 
         option3 = '(3) Planning Ahead'; 
@@ -191,7 +253,7 @@ for i = 1:27 % this for loop displays questions in random order until test is co
         option4 = '(4) RELUCTANT YES: you know you have to study but watching Batman is a must';
     end
     
-% displaying options on screen
+    % displaying options on screen
    
     Screen('TextSize', window, 20);
     Screen('TextFont', window, 'Courier');
@@ -211,22 +273,33 @@ for i = 1:27 % this for loop displays questions in random order until test is co
     
     Screen('Flip', window);
 
-% restricting user keyboard responses to 1, 2, 3, or 4 
+    % restricting user keyboard responses to 1, 2, 3, or 4 
     
-    % KbStrokeWait; 
-    % KbNames('UnifyKeyNames')
+        % KbStrokeWait; 
+        % KbNames('UnifyKeyNames')
    
     RestrictKeysForKbCheck([KbName('1!') KbName('2@') KbName('3#') KbName('4$') KbName('ESCAPE')]);
     [secs, keyCode] = KbStrokeWait;
     qans = KbName(keyCode);
 
-% helps us store data into a row vector called responses 
-    
-    % if the questions are from 1-9, place a,b,c, or d in responses
+    % helps us store data into a row vector called responses 
+    % since the questions are randomized, there must be someway we can
+    % obtain data regardless of order
 
-    comp_1 = {Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9};
+    set_1 = [Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9];
+    set_2 = [Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18];
+    set_3 = [Q19 Q20 Q21 Q22 Q23 Q24 Q25 Q26 Q27];
+    set_4 = [Q28 Q29 Q30 Q31 Q32 Q33 Q34 Q35 Q36];
 
-    if strcmp(specific_question, comp_1) 
+    % the conditional below is saying, if the specific_question can be found
+    % anywhere in set_1 (this is a logical operand, so we set it equal to 1)
+    % described above, insert 'a' into responses when they
+    % click 1, insert 'b' into responses when they click 2, and so on. 
+
+    % NOTE: 'responses' was initialized earlier in the script called
+    % 'personality_test_display.m'
+
+    if ismember(specific_question, set_1) == 1
 
         if strcmp(qans,'1!')
             responses = [responses, 'a']; 
@@ -237,13 +310,32 @@ for i = 1:27 % this for loop displays questions in random order until test is co
         elseif strcmp(qans,'4$')
             responses = [responses, 'd'];
         end
-    end
+    
+    elseif ismember(specific_question, set_2) == 1
 
-    % if the questions are from 28-36, place m,n,o, or p in responses
+        if strcmp(qans,'1!')
+            responses = [responses, 'e']; 
+        elseif strcmp(qans,'2@')
+            responses = [responses, 'f'];
+        elseif strcmp(qans,'3#')
+            responses = [responses, 'g'];
+        elseif strcmp(qans,'4$')
+            responses = [responses, 'h'];
+        end
 
-    comp_2 = {Q28, Q29, Q30, Q31, Q32, Q33, Q34, Q35, Q36};
+    elseif ismember(specific_question, set_3) == 1
 
-    if strcmp(specific_question, comp_2) 
+        if strcmp(qans,'1!')
+            responses = [responses, 'i']; 
+        elseif strcmp(qans,'2@')
+            responses = [responses, 'j'];
+        elseif strcmp(qans,'3#')
+            responses = [responses, 'k'];
+        elseif strcmp(qans,'4$')
+            responses = [responses, 'l'];
+        end
+
+    elseif ismember(specific_question, set_4) == 1
 
         if strcmp(qans,'1!')
             responses = [responses, 'm']; 

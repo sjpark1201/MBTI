@@ -1,10 +1,12 @@
-% Sean Park wrote and debugged the code: 8-10 hours
+% CLPS 0950 - Project I by Sean Park, Minchae Kim, and Wonjin Ko
+
+% Sean Park wrote and debugged the code below: 8-10 hours
 
 % Clears the workspace and the screen
 
 close all;
 clearvars;
-sca
+sca  
 
 RestrictKeysForKbCheck([]);
 
@@ -12,11 +14,11 @@ Screen('Preference', 'SkipSyncTests', 1); % Prevents the possibility of encounte
 
 % Introduction Screen
 
-% Display Settings
+% General Display Settings
 
 BackColor = [255 255 255];
 
-TextColor = [0 0 0];   
+TextColor = [0 0 0];              
 TextFont = 'Courier';
 
 screens = Screen('Screens');
@@ -67,7 +69,7 @@ KbStrokeWait;
 
 responses = [];     
 
-% Algorithm to   display multiple choice questions onto psychtoolbox 
+% Algorithm to display multiple choice questions onto psychtoolbox 
     
 personality_test_question_and_options
 

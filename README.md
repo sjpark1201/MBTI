@@ -8,4 +8,12 @@ This project involves utilizing both MATLAB and Psychtoolbox 3 to create a MATLA
      
 Our project involves many concepts that we learned in class in addition to some new concepts. Generally speaking, we used conditionals, loops, logical operands, vectors, image display tactics, and lots of string arrays.
 
+You can view the trajectory of our project on this repository. However, to run the actual test itself, you will only need to use the following documents:
+
+     - personality_test_display.m
+     - personality_test_question_and_options.m
+     - completion_and_results.m
+     
+Ensure you run the program through the script -- personality_test_display.m 
+
 The project as a whole came together in the end, and we hope you enjoy! 

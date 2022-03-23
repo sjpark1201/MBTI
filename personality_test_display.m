@@ -2,6 +2,9 @@
 
 % Sean Park wrote and debugged the code below: 8-10 hours
 
+% NOTE: when you run this code for the first time, it may crash. If it
+% does, wait for it to close and then try running it again. It should work
+
 % Clears the workspace and the screen
 
 close all;

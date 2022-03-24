@@ -116,7 +116,7 @@ DrawFormattedText(window, 'Your MBTI Personality Test Results', 'center', screen
 Screen('TextSize', window, 30);
 Screen('TextFont', window, 'Courier');
 p_type = strcat('Personality Type:', e_or_i, s_or_n, t_or_f, j_or_p);
-DrawFormattedText(window, p_type, 'center', screenYpixels * 0.3, [1 1 1]);
+DrawFormattedText(window, p_type, 'center', screenYpixels * 0.3, [68 142 228]);
 
 Screen('TextSize', window, 27);
 Screen('TextFont', window, 'Courier');

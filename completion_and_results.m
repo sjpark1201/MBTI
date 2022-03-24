@@ -102,6 +102,8 @@ KbStrokeWait;
     percentage_J = (J/(9)) * 100;
     percentage_P = (P/(9)) * 100;
 
+    personality = strcat(e_or_i, s_or_n, t_or_f, j_or_p)
+
 % Results Page
 
 Screen('TextSize', window, 40); 
@@ -118,56 +120,93 @@ Screen('TextFont', window, 'Courier');
 p_type = strcat('Personality Type:', e_or_i, s_or_n, t_or_f, j_or_p);
 DrawFormattedText(window, p_type, 'center', screenYpixels * 0.3, [68 142 228]);
 
-Screen('TextSize', window, 27);
+% Personality Name: assigning personality name based on type 
+
+if personality == ' INTJ'
+    p_name = 'ARCHITECT: Imaginative and strategic thinkers, with a plan for everything';
+elseif personality == ' INTP'
+    p_name = 'LOGICIAN: Innovative inventors with an unquenchable thirst for knowledge';
+elseif personality == ' ENTJ'
+    p_name = 'COMMANDER: Bold, imaginative, and strong-willed leaders, always finding a way - or making one';
+elseif personality == ' ENTP'
+    p_name = 'DEBATER: Smart and curious thinkers who cannot resist and intellectual challenge';
+elseif personality == ' INFJ'
+    p_name = 'ADVOCATE: Quiet and mystical, yet very inspiring and tireless idealists';
+elseif personality == ' INFP' 
+    p_name = 'MEDIATOR: Poetic, kind, and altruistic people, always eager to help a good cause';
+elseif personality == ' ENFJ' 
+    p_name = 'PROTAGONIST: Charismatic and inspiring leaders, able to mesmerize their listeners';
+elseif personality == ' ENFP' 
+    p_name = 'CAMPAIGNER: Enthusiastic, creative, and sociable free spirits, who can always find a reason to smile';
+elseif personality == ' ISTJ' 
+    p_name = 'LOGISTICIAN: Practical and fact-minded individuals, whose reliability cannot be doubted';
+elseif personality == ' ISFJ'
+    p_name = 'DEFENDER: Very dedicated and warm protectors, always ready to defend their loved ones';
+elseif personality == ' ESTJ' 
+    p_name = 'EXCECUTIVE: Excellent administrators, unsurpassed at managing things - or people';
+elseif personality == ' ESFJ'
+    p_name = 'CONSUL: Extraordinarily caring, social, and popular people, always eager to help';
+elseif personality == ' ISTP' 
+    p_name = 'VIRTUSO: Bold and practical experimenters, masters of all kinds of tools';
+elseif personality == ' ISFP'
+    p_name = 'ADVENTURER: Flexible and charming artists, always ready to explore and experience something new';
+elseif personality == ' ESTP'
+    p_name = 'ENTREPRENEUR: Smart, energetic, and very perceptive people, who truly enjoy living on the edge';
+elseif personality == ' ESFP' 
+    p_name = 'ENTERTAINER: Spontaneous, energetic, and enthusiastic people - life is never boring around them';
+end
+
+Screen('TextSize', window, 28);
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'Specific Results: ' , 'center', screenYpixels * 0.4, [1 1 1]);
+DrawFormattedText(window, p_name, 'center', screenYpixels * 0.4, [83, 97, 138]);
 
 % Each of the following below displays the percent value to which you are
 % in a specific category. The strcat involves the number 32 which is the
 % ASCII space character
 
+Screen('TextSize', window, 27);
+Screen('TextFont', window, 'Courier');
+DrawFormattedText(window, 'Specific Results: ' , 'center', screenYpixels * 0.5, [1 1 1]);
+
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_ext = strcat('Percent Extroverted (E):', 32, num2str(percentage_E), '%');
-DrawFormattedText(window, percentage_ext , 'center', screenYpixels * 0.5, [1 1 1]);
+DrawFormattedText(window, percentage_ext , 'center', screenYpixels * 0.6, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_int = strcat('Percent Introverted (I):', 32, num2str(percentage_I), '%');
-DrawFormattedText(window, percentage_int, 'center', screenYpixels * 0.55, [1 1 1]);
+DrawFormattedText(window, percentage_int, 'center', screenYpixels * 0.65, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_sen = strcat('Percent Sensing (S):', 32, num2str(percentage_S), '%');
-DrawFormattedText(window, percentage_sen, 'center', screenYpixels * 0.6, [1 1 1]);
+DrawFormattedText(window, percentage_sen, 'center', screenYpixels * 0.7, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_ntu = strcat('Percent Intuition (N):', 32, num2str(percentage_N), '%');
-DrawFormattedText(window, percentage_ntu, 'center', screenYpixels * 0.65, [1 1 1]);
+DrawFormattedText(window, percentage_ntu, 'center', screenYpixels * 0.75, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_think = strcat('Percent Thinking (T):', 32, num2str(percentage_T), '%');
-DrawFormattedText(window, percentage_think, 'center', screenYpixels * 0.7, [1 1 1]);
+DrawFormattedText(window, percentage_think, 'center', screenYpixels * 0.8, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_feel = strcat('Percent Feeling (F):', 32, num2str(percentage_F), '%');
-DrawFormattedText(window, percentage_feel, 'center', screenYpixels * 0.75, [1 1 1]);
+DrawFormattedText(window, percentage_feel, 'center', screenYpixels * 0.85, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_judge = strcat('Percent Judging (J):', 32, num2str(percentage_J), '%');
-DrawFormattedText(window, percentage_judge , 'center', screenYpixels * 0.8, [1 1 1]);
+DrawFormattedText(window, percentage_judge , 'center', screenYpixels * 0.9, [1 1 1]);
 
 Screen('TextSize', window, 25);
 Screen('TextFont', window, 'Courier');
 percentage_percieve = strcat('Percent Percieving (P):', 32, num2str(percentage_P), '%');
-DrawFormattedText(window, percentage_percieve, 'center', screenYpixels * 0.85, [1 1 1]);
+DrawFormattedText(window, percentage_percieve, 'center', screenYpixels * 0.95, [1 1 1]);
 
 Screen('Flip', window);
 KbStrokeWait;
-
-
-

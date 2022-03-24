@@ -36,7 +36,7 @@ Screen('TextFont', window, TextFont); % Sets all text in the font that we chose
 % Displaying text we want to on the main screen 
 
 Screen('TextSize', window, 50);
-DrawFormattedText(window, 'MBTI (Myers-Briggs Type Indicator) Personality Test', 'center', screenYpixels * 0.4, TextColor);
+DrawFormattedText(window, 'MBTI (Myers-Briggs Type Indicator) Personality Test', 'center', screenYpixels * 0.4, [68 142 228]);
 
 Screen('TextSize', window, 40);
 DrawFormattedText(window, 'The next page contains important instructions. Please read them carefully', 'center', screenYpixels * 0.5, TextColor);
@@ -51,7 +51,7 @@ KbStrokeWait;
 
 Screen('TextSize', window, 50); 
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'MBTI Personality Test Instructions:', 'center', screenYpixels * 0.4  , [1 1 1]);
+DrawFormattedText(window, 'MBTI Personality Test Instructions:', 'center', screenYpixels * 0.4  , [68 142 228]);
 
 Screen('TextSize', window, 30);
 Screen('TextFont', window, 'Courier');

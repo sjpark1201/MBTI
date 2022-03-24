@@ -44,7 +44,7 @@ imagesc(img4)
         %labels the images
         Screen('TextSize', window, 40);
         Screen('TextFont', window, 'Courier');
-        DrawFormattedText(window, 'a' , screenXpixels*.245, screenYpixels*.4, [1 1 1]);
-        DrawFormattedText(window, 'b' , screenXpixels*.41, screenYpixels*.4, [1 1 1]);
-        DrawFormattedText(window, 'c' , screenXpixels*.58, screenYpixels*.4, [1 1 1]);
-        DrawFormattedText(window, 'd' , screenXpixels*.745, screenYpixels*.4, [1 1 1]);
+        DrawFormattedText(window, '1' , screenXpixels*.245, screenYpixels*.4, [1 1 1]);
+        DrawFormattedText(window, '2' , screenXpixels*.41, screenYpixels*.4, [1 1 1]);
+        DrawFormattedText(window, '3' , screenXpixels*.58, screenYpixels*.4, [1 1 1]);
+        DrawFormattedText(window, '4' , screenXpixels*.745, screenYpixels*.4, [1 1 1]);

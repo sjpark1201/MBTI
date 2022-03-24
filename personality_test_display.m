@@ -40,6 +40,9 @@ DrawFormattedText(window, 'MBTI (Myers-Briggs Type Indicator) Personality Test',
 
 Screen('TextSize', window, 40);
 DrawFormattedText(window, 'The next page contains important instructions. Please read them carefully', 'center', screenYpixels * 0.5, TextColor);
+
+Screen('TextSize', window, 20);
+DrawFormattedText(window, 'Personality Descriptions accredited to 16Personalities' ,'center', screenYpixels * 0.8, TextColor);
  
 Screen('TextSize', window, 20);
 DrawFormattedText(window, 'Press any key to continue ...' ,'center', screenYpixels * 0.9, TextColor);

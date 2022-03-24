@@ -63,7 +63,7 @@ for i = 1:36
 
     Screen('TextSize', window, 30);
     Screen('TextFont', window, 'Courier');
-    DrawFormattedText(window, char(specific_question), 'center', screenYpixels * 0.2, [1 1 1]); 
+    DrawFormattedText(window, char(specific_question), 'center', screenYpixels * 0.2, [112 128 144]); 
     
     %Q1-Q9 and Q19-Q27 were coded by Minchae Kim: 1 hour
     %Q10-Q11 was coded by Wonjin Ko: 1 hour

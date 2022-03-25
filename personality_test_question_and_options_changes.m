@@ -1,4 +1,4 @@
-% Questions: questions were created by all three of us (~2 hours)
+% Questions: questions were created by all three of us (~3 hours)
 
     Q1 = "QUESTION: When you call someone do you: ";
     Q2 = "QUESTION: Do you prefer ...";
@@ -44,7 +44,7 @@
     Q13_3 = 'https://images.unsplash.com/photo-1581337204873-ef36aa186caa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZHNjYXBlJTIwcGFpbnRpbmd8ZW58MHx8MHx8&w=1000&q=80';
     Q13_4 = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSaSBrUMiSPey1tqWoJGL1hiNoLY0xxwtjRg&usqp=CAU';
 
-% Minchae Kim wrote and debugged the code: 2-3 hours
+% Minchae Kim wrote and debugged the code: 4-5 hours
 
 questions = [Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Q12 Q13 Q14 Q15 Q16 Q17 Q18 Q19 Q20 Q21 Q22 Q23 Q24 Q25 Q26 Q27 Q28 Q29 Q30 Q31 Q32 Q33 Q34 Q35 Q36];
 
@@ -59,7 +59,7 @@ for num = r_q_bank
 end 
 
 % Sean Park coded the following: 7-8 hours
-% Wonjin Ko reviewed and edited the code: 2-3 Hours 
+% Wonjin Ko and Minchae Kim reviewed and edited the code: 4-5 Hours 
 % this for loop displays questions in random order until test is complete
 
 for i = 1:36 

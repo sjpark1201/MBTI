@@ -30,7 +30,7 @@ TextFont = 'Courier';
 screens = Screen('Screens');
 ScreenNum = max(screens);  
 
-[window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor,[0 0 2000 2000]); % opens a window on the mainscreen with chosen background color
+[window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor,[0 0 3200 1600]); % opens a window on the mainscreen with chosen background color
 [screenXpixels, screenYpixels] = Screen('WindowSize', window);
 [xCenter, yCenter] = RectCenter(windowRect);
 
@@ -39,16 +39,16 @@ Screen('TextFont', window, TextFont); % Sets all text in the font that we chose
 % Displaying text we want to on the main screen 
 
 Screen('TextSize', window, 50);
-DrawFormattedText(window, 'MBTI (Myers-Briggs Type Indicator) Personality Test', 'center', screenYpixels * 0.4, [68 142 228]);
+DrawFormattedText(window, 'MBTI (Myers-Briggs Type Indicator) Personality Test', 'center', screenYpixels * 0.4, [68 142 228],60);
 
 Screen('TextSize', window, 40);
-DrawFormattedText(window, 'The next page contains important instructions. Please read them carefully', 'center', screenYpixels * 0.5, TextColor);
+DrawFormattedText(window, 'The next page contains important instructions. Please read them carefully', 'center', screenYpixels * 0.5, TextColor,60);
 
 Screen('TextSize', window, 20);
-DrawFormattedText(window, 'Personality Descriptions accredited to 16Personalities' ,'center', screenYpixels * 0.8, TextColor);
+DrawFormattedText(window, 'Personality Descriptions accredited to 16Personalities' ,'center', screenYpixels * 0.8, TextColor,60);
  
 Screen('TextSize', window, 20);
-DrawFormattedText(window, 'Press any key to continue ...' ,'center', screenYpixels * 0.9, TextColor);
+DrawFormattedText(window, 'Press any key to continue ...' ,'center', screenYpixels * 0.9, TextColor,60);
 
 Screen('Flip', window);
 KbStrokeWait;
@@ -57,19 +57,19 @@ KbStrokeWait;
 
 Screen('TextSize', window, 50); 
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'MBTI Personality Test Instructions:', 'center', screenYpixels * 0.4  , [68 142 228]);
+DrawFormattedText(window, 'MBTI Personality Test Instructions:', 'center', screenYpixels * 0.4  , [68 142 228],40);
 
 Screen('TextSize', window, 30);
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'This test consists of 36 multiple choice questions designed to identify you with one of 16 personality types.', 'center', screenYpixels * 0.5, [1 1 1]);
+DrawFormattedText(window, 'This test consists of 36 multiple choice questions designed to identify you with one of 16 personality types.', 'center', screenYpixels * 0.5, [1 1 1],40);
 
 Screen('TextSize', window, 30);
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'To respond to each question, press the cooresponding number to the answer choice on your keyboard. ' , 'center', screenYpixels * 0.6, [1 1 1]);
+DrawFormattedText(window, 'To respond to each question, press the cooresponding number to the answer choice on your keyboard. ' , 'center', screenYpixels * 0.6, [1 1 1],40);
 
 Screen('TextSize', window, 20);
 Screen('TextFont', window, 'Courier');
-DrawFormattedText(window, 'Press 1 to continue' , 'center', screenYpixels * 0.9, [1 1 1]);
+DrawFormattedText(window, 'Press 1 to continue' , 'center', screenYpixels * 0.9, [1 1 1],40);
 
 Screen('Flip', window);
 KbStrokeWait;   

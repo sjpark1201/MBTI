@@ -1,4 +1,5 @@
 
+
 % Questions: questions were created by all three of us (~2 hours)
 
     Q1 = "QUESTION: When you call someone do you: ";
@@ -64,7 +65,7 @@ for i = 1:36
     % displays the question on the screen
     Screen('TextSize', window, 30);
     Screen('TextFont', window, 'Courier');
-    DrawFormattedText(window, char(specific_question), 'center', screenYpixels * 0.2, [112 128 144],40); 
+    DrawFormattedText(window, char(specific_question), 'center', screenYpixels * 0.2, [112 128 144],70); 
     
     %Q1-Q9 and Q19-Q27 were coded by Minchae Kim: 1 hour
     %Q10-Q11 was coded by Wonjin Ko: 1 hour
@@ -73,7 +74,17 @@ for i = 1:36
     %creating separate code for images%
  if specific_question == Q13
      image_display
- else 
+     option1 = '(1) Painting 1';
+     option2 = '(2) Painting 2';
+     option3 = '(3) Painting 3';
+     option4 = '(4) Painting 4';
+ elseif specific_question == Q33
+     Q33_image_display
+        option1 = '(1) Franklin Quote';
+        option2 = '(2) Morrison Quote';
+        option3 = '(3) Christie Quote';
+        option4 = '(4) Einstein Quote';
+ elseif specific_question ~= Q13 && specific_question ~= Q33
     % assigning and displaying specific options to each question   
     if specific_question == Q1
         option1 = '(1) Easily come up with stuff on the fly'; 
@@ -230,11 +241,6 @@ for i = 1:36
         option2 = '(2) before making the decision';
         option3 = '(3) while making the decision';
         option4 = '(4) throughout the whole process';
-    elseif specific_question == Q33 
-        option1 = '(1) Franklin Quote';
-        option2 = '(2) Morrison Quote';
-        option3 = '(3) Christie Quote';
-        option4 = '(4) Einstein Quote';
     elseif specific_question == Q34
         option1 = '(1) Today and finish it in a few hours';
         option2 = '(2) The day before its due and finish it in a few hours';
@@ -251,27 +257,61 @@ for i = 1:36
         option3 = '(3) RELUCTANT NO: you really want to go but realize studying is probably what you should do';
         option4 = '(4) RELUCTANT YES: you know you have to study but watching Batman is a must';
     end
+ end
 
-    % displaying options on screen
-   
-    Screen('TextSize', window, 20);
+    % displaying options on screen and customizing placement to account for
+    % images
+   if specific_question == Q13 
+       Screen('TextSize', window, 20);
     Screen('TextFont', window, 'Courier');
-    DrawFormattedText(window, option1, 'center', screenYpixels * 0.4, [1 1 1]);
+    DrawFormattedText(window, option1, 'center', screenYpixels * 0.6, [1 1 1],90);
 
     Screen('TextSize', window, 20);  
     Screen('TextFont', window, 'Courier');
-    DrawFormattedText(window, option2, 'center',screenYpixels * 0.5, [1 1 1]);
+    DrawFormattedText(window, option2, 'center',screenYpixels * 0.7, [1 1 1],90);
 
     Screen('TextSize', window, 20);
     Screen('TextFont', window, 'Courier');  
-    DrawFormattedText(window, option3, 'center', screenYpixels * 0.6, [1 1 1]);
+    DrawFormattedText(window, option3, 'center', screenYpixels * 0.8, [1 1 1],90);
 
     Screen('TextSize', window, 20);
     Screen('TextFont', window, 'Courier');
-    DrawFormattedText(window, option4, 'center', screenYpixels * 0.7, [1 1 1]);
-    
+    DrawFormattedText(window, option4, 'center', screenYpixels * 0.9, [1 1 1],90);
+   elseif specific_question == Q33
+       Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option1, 'center', screenYpixels * 0.65, [1 1 1],90);
+
+    Screen('TextSize', window, 20);  
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option2, 'center',screenYpixels * 0.75, [1 1 1],90);
+
+    Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');  
+    DrawFormattedText(window, option3, 'center', screenYpixels * 0.85, [1 1 1],90);
+
+    Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option4, 'center', screenYpixels * 0.95, [1 1 1],90);   
+   else
+    Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option1, 'center', screenYpixels * 0.4, [1 1 1],100);
+
+    Screen('TextSize', window, 20);  
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option2, 'center',screenYpixels * 0.5, [1 1 1],100);
+
+    Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');  
+    DrawFormattedText(window, option3, 'center', screenYpixels * 0.6, [1 1 1],100);
+
+    Screen('TextSize', window, 20);
+    Screen('TextFont', window, 'Courier');
+    DrawFormattedText(window, option4, 'center', screenYpixels * 0.7, [1 1 1],100);
+   end 
     Screen('Flip', window);
- end 
+ 
     % restricting user keyboard responses to 1, 2, 3, or 4 
     
         % KbStrokeWait; 

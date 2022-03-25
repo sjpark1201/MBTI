@@ -10,9 +10,9 @@ Our project involves many concepts that we learned in class in addition to some 
 
 You can view the trajectory of our project on this repository. However, to run the actual test itself, you will only need to use the following documents:
 
-     - personality_test_display.m
-     - personality_test_question_and_options.m
-     - completion_and_results.m
+     - personality_test_display_changes.m
+     - personality_test_question_and_options_changes.m
+     - completion_and_results_changes.m
      
 Ensure you run the program through the script -- personality_test_display.m 
 

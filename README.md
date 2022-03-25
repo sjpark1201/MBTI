@@ -18,4 +18,4 @@ Ensure you run the program through the script -- personality_test_display_change
 
 The project as a whole came together in the end, and we hope you enjoy! Below is a recording of what our project looks like!
 
-![](https://github.com/sjpark1201/MBTI/CLPS 0950 (Sean Park, Wonjin Ko, Minchae Kim).gif)
+![](https://github.com/sjpark1201/MBTI/CLPS0950P1.gif)

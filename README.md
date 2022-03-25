@@ -18,4 +18,5 @@ Ensure you run the program through the script -- personality_test_display_change
 
 The project as a whole came together in the end, and we hope you enjoy! Below is a recording of what our project looks like!
 
-![](https://github.com/sjpark1201/MBTI/CLPS0950P1.gif)
+https://user-images.githubusercontent.com/101481287/160039230-ab825bb3-e70a-42de-9533-31abe4e63090.mp4
+

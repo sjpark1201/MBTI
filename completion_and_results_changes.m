@@ -1,5 +1,5 @@
 % Sean Park coded and debugged this code: 2 hours 
-%Wonjin Ko reviewed/edited this code: 1 hour
+% Wonjin Ko reviewed/edited this code: 1 hour
 % Completion Screen
 
 % Displaying text we want to on the main screen 
@@ -102,7 +102,7 @@ KbStrokeWait;
     percentage_J = (J/(9)) * 100;
     percentage_P = (P/(9)) * 100;
 
-    personality = strcat(e_or_i, s_or_n, t_or_f, j_or_p)
+    personality = strcat(e_or_i, s_or_n, t_or_f, j_or_p);
 
 % Results Page
 

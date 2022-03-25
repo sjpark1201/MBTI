@@ -1,8 +1,8 @@
-
-  % CLPS 0950 - Project I by Sean Park, Minchae Kim, and Wonjin Ko
+% CLPS 0950 - Project I by Sean Park, Minchae Kim, and Wonjin Ko
 
 % Sean Park wrote and debugged the code below: 8-10 hours
 % Wonjin Ko reviewed/edited this code: 2-3 hours 
+
 % NOTE: when you run this code for the first time, it may crash. If it
 % does, wait for it to close and then try running it again. It should work
 
@@ -30,7 +30,7 @@ TextFont = 'Courier';
 screens = Screen('Screens');
 ScreenNum = max(screens);  
 
-[window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor,[0 0 3200 1600]); % opens a window on the mainscreen with chosen background color
+[window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor); % opens a window on the mainscreen with chosen background color
 [screenXpixels, screenYpixels] = Screen('WindowSize', window);
 [xCenter, yCenter] = RectCenter(windowRect);
 

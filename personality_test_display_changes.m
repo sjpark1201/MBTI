@@ -30,6 +30,8 @@ TextFont = 'Courier';
 screens = Screen('Screens');
 ScreenNum = max(screens);  
 
+% For some computers, the following code may work better for line 35: [window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor, [0 0 3200 1500])
+
 [window, windowRect] = PsychImaging('OpenWindow', ScreenNum, BackColor); % opens a window on the mainscreen with chosen background color
 [screenXpixels, screenYpixels] = Screen('WindowSize', window);
 [xCenter, yCenter] = RectCenter(windowRect);
